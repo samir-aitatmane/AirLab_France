@@ -1,5 +1,5 @@
 [build]
-builder = "nixpacks"
+builder = "railpack"
 
 [deploy]
 startCommand = "streamlit run app.py --server.port=$PORT --server.address=0.0.0.0 --server.headless=true"
@@ -7,16 +7,3 @@ startCommand = "streamlit run app.py --server.port=$PORT --server.address=0.0.0.
 [cron]
 schedule = "0 16 * * *"
 command = "python ingest.py"
-```
-
-**3. `Dockerfile`** — pas obligatoire avec Railway (il détecte automatiquement Python), tu peux le laisser vide ou le supprimer.
-
-**4. `.gitignore`** — vérifie qu'il contient bien :
-```
-.env
-__pycache__/
-*.pyc
-venv/
-data/
-*.duckdb
-logs/
