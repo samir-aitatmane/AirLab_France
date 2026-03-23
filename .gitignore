@@ -1,0 +1,29 @@
+# Variables d'environnement — NE JAMAIS COMMITER
+.env
+.env.local
+.env.production
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+.venv/
+
+# Données locales
+data/
+*.duckdb
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
